@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 다시하기.. -->
+<title>404 페이지</title>
+<style type="text/css">
+canvas {
+	background-image:
+		url("https://image.aladin.co.kr/product/28182/88/cover500/k212835773_1.jpg");
+	width: 640px;
+	height: 430px;
+}
+</style>
+</head>
+<body>
+	<canvas id="canvas" width="640px" height="430px"></canvas>
+	<img alt="포켓몬" src="./img/pocket.png" usemap="#poketmon">
+	<!-- poketmon 이미지의 맵을 그려줌 -->
+	<!-- 포켓몬 누르면 페이지 이동/ coords: 좌표 -->
+	<map name="poketmon">
+		<area type="rect" coords="160,47,228,103" href="./index.html">
+	</map>
+
+</body>
+<script type="text/javascript">
+	var canvas = document.getElementById("canvas");
+	if (canvas.getContext) { //canvas에 값이 있다면 
+		var ctx = canvas.getContext("2d");
+		ctx.strokeRect(29, 160, 150, 50); //x,y좌표, 크기
+	}
+</script>
+</html>

@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+body {
+	margin: 10px; /*왼쪽에 있던 애들 조금 떨어짐*/
+}
+
+h2 {
+	background-color: orange;
+}
+
+h2#point {
+	background-color: olive;
+	cursor: pointer;
+}
+
+h2#point:hover { /*마우스가 올라갔을 경우*/
+	background-color: skyblue;
+}
+
+img {
+	width: 50px;
+}
+
+/*
+	li img: li에 소속된
+ 	li>img: li 바로 밑
+ */
+li>img {
+	width: 30px;
+}
+
+/*영역을 가로로 잡고자 할 때: position*/
+div#op {
+	border: 5px solid #ccc;
+	width: 500px;
+	height: 60px;
+	/* 	display:inline-block; 두줄이었던 게 자동으로 한줄로 */
+	position: relative;
+}
+
+#a, #b {
+	border: 1px solid blue;
+	width: 200px;
+	position: absolute; /*절댓값*/
+	/*a,b를 div 영역에서 (0,0) 좌표로 가게 함*/
+}
+
+#b {
+	right: 0px; /*b가 (0,0)에 있던 걸 오른쪽으로 가게 해 */
+	/*그러면 가로로 정렬되는 것처럼 보임*/
+}
+
+nav.navbar-inverse { /*nav보다 우선순위 높음 11점*/
+	background-color: orange;
+	border-color: red;
+}

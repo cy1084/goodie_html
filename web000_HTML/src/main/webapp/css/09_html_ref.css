@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+body {
+	background-color: #b5a789;
+	font-family: "Time new Roman", Time, serif;
+	font-size: small;
+	margin: 0px;
+}
+
+#header {
+	background-color: #675c47;
+	margin: 0px;
+	height: 108px;
+}
+
+#main, #sidebar {
+	background: #efe5dd url("../img/background.gif") top left;
+	/*background: color, url, image*/
+	font-size: 105%;
+	padding: 15px;
+	margin: 0px 10px 10px 10px;
+}
+
+#footer {
+	background: #675c47;
+	color: #efe5dd;
+	text-align: center;
+	padding: 15px;
+	margin: 10%;
+	font-size: 90%;
+}
+
+.slogan {
+	color: #954b4b;
+}
+
+.heading {
+	text-align: center;
+	line-height: 1.8em;
+}
+
+h1 {
+	font-size: 120%;
+	color: #954b4b;
+}
+
+a:visited {
+	color: #7b6666;
+	text-decoration: none;
+	border-bottom: thin dotted #7b6666;
+}
+
+a:link{
+	color:#676767;
+	text-decoration: none;
+	border-bottom: thin dotted #676767;
+}

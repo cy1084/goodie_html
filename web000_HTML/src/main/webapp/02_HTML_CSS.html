@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML에서 CSS 사용 방법</title>
+<!-- css는 무조건 head 태그 안에!! -->
+<style type="text/css">
+/*
+	1) css의 <style>은 반드시 <head></head> 안에 작성해야 한다.
+	2) 작성방법 inline(tag에 직접 작성), embeded(<head> 안에 작성), linked(외부에서 작성하여 링크)
+	3) 선택자(selector 표현식)- document에서 특정한 tag를 선택하는 방법
+		: id(100점), class(10점), tag(1점)
+	4) 우선순위
+		0순위: inline에 작성 style 정의
+		1순위: 작성된 순서
+		2순위: 작성된 순서도 같다면 id+class+tag의 값이 가장 높은 순
+*/
+
+/* tag로 검색하여 적용*/
+body {
+	/*크기를 선정할 때는 픽셀 단위인지 % 비율 단위인지 확인*/
+	border: 5px dotted green; /*단순 작성 방법*/
+	border-bottom-color: orange;
+	border-radius: 20px; /*라운드 처리*/
+	background: #E4F7BA; /*16진수 표현 방식*/
+	/*
+	padding은 누적
+	margin은 겹침(큰 값 따라감) 
+	*/
+	margin: 100px 10px; /*위 오른쪽 아래 왼쪽*/
+	margin-left: 100px;
+	margin-right: 10%;
+	font-family: monospace;
+	padding-left: 10px; /*글씨 들여쓰기*/
+}
+/*
+margin은 서로 겹친 값으로 되거나 큰 값으로 처리된다. padding+margin은 더한 값으로 처리
+*/
+p {
+	margin-left: 20px;
+}
+
+font {
+	margin: 20px;
+}
+</style>
+</head>
+<body>
+	<div style="font-size:20px">
+		<p style="background-color: white;">나는 p tag이다</p>
+		<font style="color:tomato; font-size:10px; font-family:fantasy;">
+		new days!!!</font>
+	</div>
+</body>
+</html>

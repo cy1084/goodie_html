@@ -1,0 +1,38 @@
+@charset "UTF-8";
+td,tr{
+	border:1px solid #008000;
+	padding: 10px;
+}
+
+table{
+	width:600px;
+	border:3px solid orange;
+	border-collapse:collapse; /*겹치는 border 없애줌*/
+	text-align: center; 
+	margin-top:40px;
+}
+
+#content table{
+	margin: auto;
+}
+thead{
+	background-color:#e0e0e0;
+	text-align: center;
+	font-weight: bold;
+	border-bottom: 1px double black;
+}
+
+tfoot{
+	background: yellow;	
+}
+
+/*하위 탐색*/
+div tbody tr:hover{ /*마우스 올라갔을 때*/
+	background-color: pink;
+}
+
+#content{
+	width:800px;
+	margin:auto;
+}
+

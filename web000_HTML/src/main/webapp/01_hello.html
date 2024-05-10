@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- <meta http-equiv="refresh" content="3; url=http://www.naver.com"> -->
+<link rel="shortcut icon" href="./img/favicon.ico">
+<title>HTML 기본 설명</title>
+</head>
+
+<!-- body: 화면에 그려질 tag와 내용을 작성하는 부분 -->
+<!-- 웹페이지에 기본 구조는 markup
+	 markup 열림tag, 닫힘tag로 구성되어 쌍으로 존재해야 함=> 'well-formed하다' 
+	 element(요소)= 시작tag + 컨텐츠 + 닫힘tag 
+-->
+<body style="font-size: 9px">
+	<fieldset>
+		<legend>네이버 검색</legend>
+		<div>
+			<!-- 영역tag -->
+			<input type="text" id="search_naver">
+			<!-- form 요소 값을 입력 -->
+			<button onclick="naver()">검색</button>
+			<!-- 버튼 -->
+		</div>
+	</fieldset>
+
+	<!-- javascript를 정의하는 tag -->
+	<script type="text/javascript">
+		function naver() {
+			var val = document.getElementById("search_naver").value;
+			console.log("화면의 값:", val);
+
+			//https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EB%82%A0%EC%94%A8
+			location.href = "https://search.naver.com/search.naver?query="
+					+ val;
+			//이동하는 함수
+			//값 입력하면 네이버에서 검색한 결과로 감			
+		}
+	</script>
+
+	<h1>HTML은 마크업을 사용합니다</h1>
+	<br>
+	<!-- web.xml은 서버가 시작될 때 설정되는 환경설정 파일이다. deployment descriptor -->
+	<h2>web.xml을 확인하세요(welcome-file tag를 확인)</h2>
+	<!-- h1~h5인 헤드라인 tag는 현재 세팅괸 글자에 대비하여 글자 크기를 조절하는 것(em 비율) -->
+	<br>
+	<h1>안녕</h1>
+	<h2>안녕</h2>
+	<h3>안녕</h3>
+
+	<!-- html은 요청한 서버에 의해 전달받고, browser가 번역하여 보여주게 됨 -->
+	<!-- java에 escape 문자가 있다면(역슬래쉬), html엔 entity tag가 있다 -->
+	<!-- entity tag: 브라우저가 번역하지 않는 것! -->	
+	
+	<div>
+	
+	
+				오늘 비			와요
+				
+	<!-- 아무리 띄어쓰기 해도 한번밖에 띄어지지 않으므로 띄우고 싶을 땐 entity 태그 사용 -->	
+	<br>
+	
+	&#169;오늘 비&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;와요
+	</div>
+	
+	<!-- html의 기본 속성을 통한 css 설정, style tag를 통해 설정 -->	
+	<!-- hr: 아래 한줄 -->
+	<hr size="10px" width="200px" color="tomato">
+	
+	<!--요소의 구분: 블럭요소<h1></h1> / 인라인요소<a></a> -->
+	<!-- 
+	블럭요소: 영역이나 범위/ 블럭요소+블럭요소 불가!/ 인라인 요소에 포함 불가! 
+	인라인요소: 블럭요소에 포함되거나 인라인요소 안에 사용할 수 있다
+	<h1><a><b>진한글</a></b></h1>
+	
+	node tree 구조에서는 상위 element가 하위 element에 영향을 줌
+	-->
+	
+	
+	<!-- 영역tag: div, span -->
+	<div> div는 블럭요소 </div>
+	<br>
+	<div> 반갑습니다
+		<span> span은 인라인요소 </span>
+	</div>
+	
+	<br>
+	<div>
+		<h1>h1은 기본 폰트크기의 1.5em을 적용</h1>
+		<!-- 화면 흐름을 제어하는 tag -->
+		<a href="https://www.naver.com/#footer">바로가기</a>
+		<!-- #: 아이디 -->
+		<br>
+		<a href="https://search.naver.com/search.naver?query=지금날씨" target="_blank">
+			네이버로 바로 검색(새창)
+			<!-- 새창 열기: target -->
+		</a>
+		
+		<!-- 글자를 작성할 때 사용 -->
+		<p style="text-align:right"> 
+			<!-- 위아래 공간 만들어줌 -->
+			<!-- 태그들 중에서는 자신의 기본 margin과 같은 기본 스타일 속성을 가진 태그들이 존재한다 -->
+			<!-- style은 css 인라인 방식이 가장 우선순위가 높다 -->
+		 이상한 나라에 &nbsp;&nbsp;&nbsp;&nbsp;앨리스<br>
+		 어벤져스<br>
+		 영원히 사는 <em>피카츄</em>
+		</p>
+		
+		<p> 
+		 이상한 나라에 &nbsp;&nbsp;&nbsp;&nbsp;앨리스<br>
+		 어벤져스<br>
+		 영원히 사는 <em>피카츄</em>
+		</p>
+	</div>
+</body>
+</html>

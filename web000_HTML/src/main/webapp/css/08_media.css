@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/*701이상에서만 사용되는 화면!(701 넘으면 css 동작 안함)*/
+@media screen and (min-width:701px) {
+	body {
+		font-size: small;
+		font-family: verdana, helvetica, sans-serif;
+		width: 980px;
+		margin: auto;
+		border: 4px double purple;
+		padding: 10px;
+	}
+
+	/*헤더*/
+	p>img {
+		width: 100%;
+	}
+	h1, h2 {
+		color: #008080;
+	}
+	h1 {
+		font-size: 150%;
+	}
+	h2 {
+		font-size: 130%;
+	}
+	#footer {
+		font-size: 50%;
+		text-align: center;
+		line-height: normal;
+		margin-top: 50px;
+		color: #800000;
+		clear: both; /*겹치는 애들 없애기(띄우기)*/
+	}
+	.ex {
+		font-family: cursive;
+	}
+	.edu {
+		font-weight: bold;
+	}
+	a {
+		text-decoration: none; /*미리 갖고 있었던 css 속성들 사라짐*/
+	}
+	a:visited {
+		color: #800000;
+	}
+	a:link {
+		color: orange;
+	}
+	#gurantee {
+		border: 1px solid white;
+		background-color: #effefe;
+		padding: 25px;
+		padding-left: 30px;
+		margin-left: 30px;
+		margin-right: 220px;
+		background-image: url("../img/dm/stamp.png");
+		background-repeat: no-repeat;
+		background-position: top left;
+	}
+	#animal {
+		border: thin solid #888888;
+		padding: 0px 20px 20px 30px;
+		width: 150px;
+		text-align: center;
+		line-height: 1.2;
+		float: right; /*광고영역 오른쪽으로!*/
+		background-image: url("../img/dm/star.png"), url("../img/dm/star.png");
+		/*이미지 여러개 가능*/
+		background-position: top, bottom;
+		background-repeat: repeat-x; /*x축으로만 이미지 반복*/
+	}
+	#animal a:visited {
+		color: green;
+	}
+	#animal a:link {
+		background-color: yellow;
+		color: blue;
+	}
+	#animal a:hover {
+		background-color: tomato;
+		color: white;
+		border-bottom: 2px dotted red;
+	}
+}

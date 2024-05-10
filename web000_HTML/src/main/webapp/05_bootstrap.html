@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<!-- CDN 방식: 사용하는 서버가 아닌 다른 서버에서 값을 가져와서 사용한다. 연결한 서버가 문제가 있으면 나도 사용 못함 -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- link 방식: 현재 작동하고 있는 서버에서 파일을 갖고 있는 경우/ 파일을 오버라이드 하지 않고 찾아서 직접 수정 가능 -->
+<!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+
+<!-- 개발자가 정의한 css link 파일/ 가능하다면 다른 곳에서 배포하고 있는 css 선언 뒤에 작성! -->
+<link rel="stylesheet" href="./css/05_html.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<fieldset>
+		<legend>Position</legend>
+		<div id="op">
+			<div id="a">안녕하세요</div>
+			<div id="b">반갑습니다</div>
+		</div>
+	</fieldset>
+
+	<div class="container">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#myNavbar">
+						<!-- data-target의 이름에 따라 저 밑에 id 값도 바꿔줘야 함! -->
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<!-- 
+					 여기 id 값!!
+					 navbar를 누르면 메뉴바 튀어나오는 이벤트! 
+				-->
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">HOME</a></li>
+						<li><a href="#">게시판</a></li>
+						<li><a href="#">일정관리</a></li>
+						<li><a href="./views/viewfile.html">내부연결</a></li>
+						<li><a
+							href="http://localhost:7979/web000_OtherHTML/other.html">외부연결</a></li>
+						<!-- 외부연결은 무조건 절대경로로! -->
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><span class="glyphicon glyphicon-user"></span>
+								회원가입</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+								로그아웃</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<hr>
+	
+	<!-- h1은 블럭요소(전체 한줄의 크기를 가지고 있다) -->
+	<h1>
+		<a href="http://www.naver.com" target="_blank" title="네이버" >
+		<!-- title-> 마우스 올리면 나타나는 기능 -->
+		다른 사이트로 이동
+		</a>
+	</h1>
+	<h1>k디지털 수업 2달차</h1>
+	<div>
+		<strong>내일은 비가 올까요?</strong> 내일은 5월 9일 
+		<!-- strong: 강조 태그 -->
+	</div>
+	<!-- <q>tag는 inline 요소/ 헷갈리면 노란줄 가면 안쓰면 됨 -->
+	<!-- blockquote는 블럭요소의 고유한 영역을 가지고 있음 따라서 h1과 같은 블럭 요소와, 같이 사용 불가!  -->
+	<div><blockquote></blockquote></div>
+	<!-- 요소에는 영역요소, 블럭요소, 인라인요소 -->
+	<h1><blockquote></blockquote></h1> <!-- h1: 블럭요소, blockquote: 블럭요소/ 노란줄 -->
+	
+	<p><blockquote></blockquote></p>
+	<!-- p와 div 영역요소 -->
+	
+	<blockquote>
+		오늘은 산책하기 좋은 날
+		<em><q>만찬</q></em>이 준비되어 있습니다.
+		내일을 위한 오늘을 만들어 봅시다.
+	</blockquote>
+	
+	<h2>2024년 5월 8일</h2>
+	<img alt="태양" src="./img/sun.png">
+	<p>
+		오늘은 <q>어버이날</q>
+		시간이 되면 부모님께<br>
+		사랑한다고 이야기 해봅시다
+	</p>
+	
+	<h2 id="point" onclick="javascript:alert('작동')">
+		<time>2024년 5월 8일</time>
+		<!-- 값을 가져올 때 시간으로 읽어서 가져옴 -->
+	</h2>
+	<img alt="화면" src="./img/html.png">
+	<p>
+		오늘은 html을 배우고 서버사이드 개발과<br>
+		자신이 개발하고자 하는 사이트의 디자인을 생각해봅시다.<br>
+		이쁜 디자인과 편리한 기능을 많이 고민해봅시다.
+	</p>
+	
+	
+	<!-- 
+		리스트 tag
+		ul: 순서가 없는 리스트
+		ol: 순서가 있는 리스트
+		li: ul과 ol의 자식 목록을 생성하는 tag
+	 -->
+	 
+	 <ol>
+	 	<li>java</li>
+	 	<li>html</li>
+	 	<li>css</li>
+	 	<li>
+	 		<img alt="javascript" src="./img/003901.png"> javascript
+	 	</li>
+	 </ol>
+	 
+	 <!-- bootstrap 적용 -->
+	 <div class="btn btn-success btn-block">
+	 	div를 버튼모양으로 
+	 	<!-- class는 모양을 입히는 것이기 때문에 어디든 가능! -->
+	 </div>
+</body>
+</html>

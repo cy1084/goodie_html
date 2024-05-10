@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+@media screen and (max-width:700px) {
+	body {
+		font-size: small;
+		font-family: verdana, helvetica, sans-serif;
+		width: 500px;
+		margin: auto;
+		border: 4px double green;
+		padding: 5px;
+	}
+	p>img {
+		width: 100%;
+	}
+	h1, h2 {
+		color: #008080;
+	}
+	h1 {
+		font-size: 150%;
+	}
+	h2 {
+		font-size: 130%;
+	}
+	#footer {
+		font-size: 50%;
+		text-align: center;
+		line-height: normal;
+		margin-top: 50px;
+		color: #800000;
+		clear: both; /*겹치는 애들 없애기(띄우기)*/
+	}
+	.ex {
+		font-family: cursive;
+	}
+	.edu {
+		font-weight: bold;
+	}
+	a {
+		text-decoration: none; /*미리 갖고 있었던 css 속성들 사라짐*/
+	}
+	a:visited {
+		color: #800000;
+	}
+	a:link {
+		color: orange;
+	}
+	#gurantee {
+		border: 1px solid white;
+		background-color: #effefe;
+		padding: 25px;
+		padding-left: 30px;
+		margin-left: 30px;
+		/* 		margin-right: 220px; */
+		background-image: url("../img/dm/stamp.png");
+		background-repeat: no-repeat;
+		background-position: top left;
+	}
+
+	/*데스크탑에서만 보이게/ 모바일에선 안보이게*/
+	#animal {
+		display: none;
+	}
+}

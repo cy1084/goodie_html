@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- mime type: browser에게 style이라는 영역의 text를 css로 번역해라 -->
+<style type="text/css">
+/*
+ embeded: document의 <head></head> 내에 작성하는 방식
+ inline: element의 속성으로 style을 선언한 후 작성하는 방식
+ link: *.css 파일을 외부(WS)에서 작성한 후 <link href="">를 통해서 연결하는 방식
+ 
+ ***inline이 가장 우선시 되어 동작됨!
+*/
+
+	body{
+	/*
+	외부라인은 2px, 선모양은 이중실선, 색은 라임
+	배경은 회색, 마진은 위 아래 20%, 위에만 200px
+	안쪽 공간은 모두 0px 위만 30% 
+	폰트 모양은 monospace로 작성하기 
+	*/
+	border: 2px double lime;
+	background-color: #EAEAEA;
+	margin: 20%;
+	margin-top: 200px;
+	padding:0px;
+	padding-top:30%;
+	font-family: monospace;
+
+	}
+
+/*
+	복합 선택자의 계산: 실행 순서와 상관없이 높은 우선순위를 가진 애가 실행
+*/
+	h1{
+	background: yellow;
+	}
+	
+	/*
+	선택자(selector)를 통해서 id를 부르는 방법 #
+	*/
+	#a{ /*100점*/
+	background: #00D8FF;
+	}
+	
+	h1#a{ /*101점*/
+	background:#FF5E00;
+	}
+		
+	h1{ /*1점*/
+	background-color:white;
+	}
+	
+/*
+	class의 사용 방법
+	id는 반드시 document에서 단 한 개이어야 함
+	class는 각 역할에 따라 중복하여 가능!
+*/
+
+	.b{	/*클래스 적용 방식*/
+	border: 1px solid black;
+	}
+	
+/*
+	같은 css를 적용할 곳
+*/
+	h2,span{
+	color: green;
+	}
+/*
+	복합 선택자 점수11
+*/
+	h2.ch{
+	color: purple;
+	}
+
+	.a1{
+		font-size:25px;
+	}
+	.a2{
+		color:orange;	
+	}
+	
+/*
+	<a> id a4 a3로 두개 선언되어 있다
+	선언하는 건 문제되지 않지만 id는 반드시 하나만 적용!(앞에서부터)
+*/
+	#a4{
+		background-color:yellow;
+	}
+	#a3{
+		color: black;
+	}
+</style>
+</head>
+<body>
+	<h1 id="a" class="b">음악다방</h1>
+	
+	<h2>수고했어 오늘도</h2>
+	<p>수고했어 오늘도, 아무도 너의 슬픔에 관심없대도.. 날 널 응원해 수고했어 오늘도</p>
+	
+	<h2>제주도의 푸른 밤</h2>
+	<p>떠나요 둘이서 모든걸 훌훌 버리고.. 제주도 푸른섬 </p>
+	
+	<h2 class="ch">한숨</h2>
+	<p>당신의 한숨.. 그 깊이를 알 순 없지만 정말 수고했어..</p>
+
+	<a href="#" class="a1 a2" id="a4" id="a3">다른 페이지로 이동</a>
+	<!-- #만 하면 자기 자신! #id명: 그 id로! -->
+	<span>테스트용 span</span>
+</body>
+</html>

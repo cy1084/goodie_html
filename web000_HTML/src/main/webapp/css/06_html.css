@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/*
+ 외부 폰트의 적용 방법
+ @import 방식을 사용하면 반드시 사용되는 font-family를 알고 있어야 함
+ @font-face 방식은 import 내부의 링크를 가져와서 사용하게 됨
+*/
+
+/* import 방식 */
+@import url('https://webfontworld.github.io/Dokdo/Dokdo.css');
+/* @import url('https://webfontworld.github.io/jeju/JejuHallasan.css'); */
+
+/* 링크 복사해서 검색해보면 font-family 알 수 있음 */
+h1,h2{
+	font-family:'Dokdo',sans-serif, cursive;
+}
+
+
+
+/* font-face 방식 */
+/* 똑같이 링크 복사해서 검색 후, url 하나 가져와서 패밀리 이름 임의로 정하기 */
+@font-face{
+	font-family:hanla; /*내가 임의로 정할 수 있음*/
+	src:url('https://cdn.jsdelivr.net/gh/webfontworld/jeju/JejuHallasan.ttf') format("truetype");
+}
+
+p{ /*폰트 적용*/
+	font-family:hanla;
+}

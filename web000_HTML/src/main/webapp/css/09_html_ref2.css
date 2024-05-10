@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+body {
+	background-color: #b5a789;
+	font-family: "Time new Roman", Time, serif;
+	font-size: small;
+	margin: 0px;
+}
+
+#header {
+	background-color: #675c47;
+	margin: 0px;
+	height: 108px;
+}
+
+#main {
+	background: #efe5dd url("../img/background.gif") top left;
+	font-size: 105%;
+	padding: 15px;
+	margin: 0px 10px 10px 10px;
+	/*
+	TODO 002 main의 배경은 float에 의해서 뒤에 넣어지게 됨
+	*/
+	margin: 0px 330px 10px 10px;
+	/*TODO 004*/
+	margin: 0px 10px 10px 10px;
+	width: 420;
+	float: left;
+}
+
+#sidebar {
+	background: #efe5dd url("../img/background.gif") top left;
+	font-size: 105%;
+	padding: 15px;
+	margin: 0px 10px 10px 10px;
+	/*
+		TODO 001-> 라인 20줄
+		sidebar의 크기를 작성하고 float 작업
+		문제: float으로 띄우게 되면 하위에 있는 Element가 위로 올라옴
+		#sidebar 영역을 수정
+	*/
+	/* 	width: 280px; */
+	/* 	float: right; */
+	/*
+		TODO 004 width와 height 삭제, margin으로 470px
+	*/
+	/* 	margin: 0px 10px 10px 470px; */
+	position: absolute;
+	width: 280px;
+	top: 140px;
+	right: 5px;
+}
+
+#footer {
+	background: #675c47;
+	color: #efe5dd;
+	text-align: center;
+	padding: 15px;
+	margin: 10px;
+	font-size: 90%;
+	/*
+	TODO 0003 #sidebar에 의해서 아래에 있는 모든 영역 겹침
+	clear 속성을 이용해서 float에 겹치지 않도록 만듦
+	*/
+	clear: both;
+}
+
+.slogan {
+	color: #954b4b;
+}
+
+.heading {
+	text-align: center;
+	line-height: 1.8em;
+}
+
+h1 {
+	font-size: 120%;
+	color: #954b4b;
+}
+
+a:visited {
+	color: #7b6666;
+	text-decoration: none;
+	border-bottom: thin dotted #7b6666;
+}
+
+a:link {
+	color: #676767;
+	text-decoration: none;
+	border-bottom: thin dotted #676767;
+}
+
+#allcontent {
+	position: relative;
+	width: 820px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #675c47;
+	margin: 0px auto;
+}

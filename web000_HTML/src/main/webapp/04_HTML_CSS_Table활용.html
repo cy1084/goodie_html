@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS link &amp; Table tag</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/04_HTML.css">
+</head>
+<body>
+	<h1>테이블 만들기</h1>
+	<h2>테이블 병합하기</h2>
+	<table>
+		<thead></thead>
+		<tbody>
+			<tr>
+				<td rowspan="2">apple</td>
+				<td colspan="2">banana</td>
+				<!-- 				<td>lemon</td> -->
+			</tr>
+			<tr>
+				<!-- 				<td>choice</td> -->
+				<td>rainbow</td>
+				<td>cup</td>
+			</tr>
+		</tbody>
+		<tfoot></tfoot>
+	</table>
+	<hr>
+	<div id="content">
+		<table>
+			<caption>HTML Table 수업</caption>
+			<thead>
+				<tr>
+					<td>연번</td>
+					<td>과목</td>
+					<td>난이도</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>자바</td>
+					<td>★★★</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>HTML</td>
+					<td>★★</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2">소계</td>
+					<td>★★</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+	<hr>
+
+	<div class="container" style="max-width: 700px">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<td>과일</td>
+					<td>여름</td>
+					<td>기타</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>사과</td>
+					<td>바나나</td>
+					<td>파인애플</td>
+				</tr>
+				<tr>
+					<td>하늘</td>
+					<td>구름</td>
+					<td>별</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
